@@ -49,7 +49,7 @@ HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b
 	ImGui::NewFrame();
 	if (Menu == true)
 	{
-		ImGui::SetNextWindowSize(ImVec2(320.0f, 220.0f)); // Geniþlik, Yükseklik
+		ImGui::SetNextWindowSize(ImVec2(320.0f, 220.0f)); // Genislik, YÃ¼kseklik
 		ImGui::Begin("Lithe's Zula Vip Hack", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings);
 
 		if (ImGui::Button("Visual", ImVec2(100.0f, 0.0f)))
@@ -64,31 +64,17 @@ HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b
 		switch (switchTabs) {
 		case 0:
 			ImGui::Checkbox("Chams", &chams);
-
 			ImGui::Text("   Ct Color: Blue", &zulaespcolor);
 			ImGui::Text("   T Color: Red", &gladioespcolor);
-
 			ImGui::Checkbox("Esp Box", &espbox);
-
 			ImGui::Text("   Ct Color: Blue", &zulaespcolor);
 			ImGui::Text("   T Color: Red", &gladioespcolor);
-
 			ImGui::Checkbox("Esp Line", &espline);
 			break;
 		case 1:
 			ImGui::Checkbox("No Smoke", &nosmoke);
 			ImGui::Checkbox("No Flash", &noflash);
-
-			//No Recoil Macro
 			ImGui::Checkbox("No Recoil", &norecoil);
-
-			if (norecoil)
-			{
-				norecoil = true;
-			}
-
-			//No Recoil Macro
-
 			ImGui::Checkbox("No Spread", &nospread);
 			ImGui::Checkbox("Fast Reload", &fastreload);
 			ImGui::Checkbox("Fast Switch", &fastswitch);
