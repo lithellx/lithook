@@ -13,6 +13,17 @@
 using namespace std;
 
 const char* windowName = "Zula"; // Process Title or Game Title || Ex: Counter-Strike: Global Offensive - Zula - ImGui DirectX9 Example - Test D3D9 window - D3D TEST ENVIROMENT
+
+void InputHandler()// Mouse Ayarları Falan Fiso
+{
+	for (int i = 0; i < 5; i++) ImGui::GetIO().MouseDown[i] = false;
+
+	int button = -1;
+	if (GetAsyncKeyState(VK_LBUTTON)) button = 0;
+
+	if (button != -1) ImGui::GetIO().MouseDown[button] = true;
+}
+
 HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b, HWND c, const RGNDATA *d)
 {
 	__asm PUSHAD;
@@ -64,11 +75,11 @@ HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b
 		switch (switchTabs) {
 		case 0:
 			ImGui::Checkbox("Chams", &chams);
-			ImGui::Text("   Ct Color: Blue", &zulaespcolor);
-			ImGui::Text("   T Color: Red", &gladioespcolor);
+			ImGui::Text("   Zula Color: Blue", &zulaespcolor);
+			ImGui::Text("   Gladio Color: Red", &gladioespcolor);
 			ImGui::Checkbox("Esp Box", &espbox);
-			ImGui::Text("   Ct Color: Blue", &zulaespcolor);
-			ImGui::Text("   T Color: Red", &gladioespcolor);
+			ImGui::Text("   Zula Color: Blue", &zulaespcolor);
+			ImGui::Text("   Gladio Color: Red", &gladioespcolor);
 			ImGui::Checkbox("Esp Line", &espline);
 			break;
 		case 1:
