@@ -60,6 +60,7 @@ HRESULT WINAPI hkPresent(LPDIRECT3DDEVICE9 pDevice, const RECT *a, const RECT *b
 	ImGui::NewFrame();
 	if (Menu == true)
 	{
+		InputHandler();
 		ImGui::SetNextWindowSize(ImVec2(320.0f, 220.0f)); // Genislik, Yükseklik
 		ImGui::Begin("Lithe's Zula Vip Hack", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings);
 
