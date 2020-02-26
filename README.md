@@ -1,5 +1,5 @@
 ## Usage
-Compile, bypass (not n00b method please), and inject.
+Compile and inject.
 
 - Menu On Lobby
 ![GitHub Logo](/ImGUIHook/Screenshots/menu.png)
